@@ -15,8 +15,9 @@ public class TestInterrupt {
         } catch (InterruptedException e) {
 
         }
-        thread.interrupt();
 //            thread.stop();一般很少用stop，因为太粗暴了，影响会很大
+        thread.interrupt();//其实interrupt也比较粗暴，虽然比stop好一些
+        //好的方法是看TestThread4
     }
 }
 

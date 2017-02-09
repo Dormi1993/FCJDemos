@@ -20,12 +20,18 @@ public class TestThread4 {
 
 
     }
-    public static void ss(){
+    protected void ss(){
 
     }
 }
 
-class Runner4 implements Runnable{
+class gg {
+    static void hh(){
+
+    }
+}
+
+class Runner4 extends gg implements Runnable{
 
     private boolean flag = true;
     int i = 0;
@@ -38,7 +44,16 @@ class Runner4 implements Runnable{
 
     public void shutdown(){
         flag = false;
+        TestThread4 testThread4 = new TestThread4();
+        testThread4.ss();
+
+        gg.hh();
+
+
+
     }
+
+
 }
 
 

@@ -5,6 +5,7 @@ package com.fcj.thread;
  */
 public class TestYield {
     public static void main(String[] args){
+        System.out.println("haha");
         MyThread3 t1 = new MyThread3("t1");
         MyThread3 t2 = new MyThread3("t2");
         t1.start();

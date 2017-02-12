@@ -33,7 +33,7 @@ class SyncStack{
     WoTou[] arrWT = new WoTou[6];
 
     public synchronized void push(WoTou wt){
-        if (index == arrWT.length){
+        while (index == arrWT.length){
             try {
                 this.wait();
             } catch (InterruptedException e) {
@@ -46,7 +46,7 @@ class SyncStack{
     }
 
     public synchronized WoTou pop(){
-        if (index == 0){
+        while (index == 0){
             try {
                 this.wait();
             } catch (InterruptedException e) {

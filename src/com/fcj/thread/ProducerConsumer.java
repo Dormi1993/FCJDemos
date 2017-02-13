@@ -74,7 +74,7 @@ class Producer implements Runnable{
         for (int i = 0; i < 20; i++){
             WoTou wt = new WoTou(i);
             ss.push(wt);
-            System.out.println("生产了：" + wt);
+            System.out.println("生产了：" + wt.id);
             try {
                 Thread.sleep((int) (Math.random() * 1000));
             } catch (InterruptedException e) {

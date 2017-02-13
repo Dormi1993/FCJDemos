@@ -8,7 +8,7 @@ public class TT implements Runnable{
 
     public synchronized void m1() throws Exception {
         b = 1000;
-        Thread.sleep(4000);
+        Thread.sleep(5000);
         System.out.println("b = " + b);
     }
 
@@ -16,9 +16,9 @@ public class TT implements Runnable{
         System.out.println(b);
     }
     public synchronized void m3() throws Exception {
-        Thread.sleep(2000);
+        Thread.sleep(3000);
         b = 2000;
-        System.out.println("m3'b = " + b);//有没有这句，线程执行顺序不一样
+//        System.out.println("m3'b = " + b);//有没有这句，线程执行顺序不一样
 
     }
 
@@ -40,8 +40,9 @@ public class TT implements Runnable{
 //        Thread.sleep(1000);
 //        tt.m2();
 
-//        Thread.sleep(1000);
+//        Thread.sleep(100);
 
+        //下面这俩是同一线程？
         tt.m3();
         System.out.println(tt.b);
 
